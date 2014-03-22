@@ -2,7 +2,7 @@
 var points = 1;
 function OnTriggerEnter (info : Collider) 
 {
-	if(info.tag == "Player")
+	if(info.name == "Player")
 	{
 		gameMaster.currentScore += points;
 		Destroy(gameObject);
