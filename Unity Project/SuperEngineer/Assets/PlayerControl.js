@@ -8,13 +8,14 @@ private var canJump = true;
 
 
 function Update () {
+
 var rotation: float = Input.GetAxis ("Vertical") * rotationSpeed;
 rotation *= Time.deltaTime;
 rigidbody.AddRelativeTorque (Vector3.back * rotation);
 
 rigidbody.velocity.x = moveSpeed;
 
-if (transform.position.y > 3) {
+if (transform.position.y > 2) {
 canJump = false;
 }
 else {
