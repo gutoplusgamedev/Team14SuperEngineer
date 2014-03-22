@@ -1,9 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CamControl.js">
     <Files>
-      <File FileName="Assets/syntaxStructure.xml" Line="70" Column="13" />
-      <File FileName="Assets/Code.cs" Line="6" Column="2" />
+      <File FileName="Assets/Code.cs" Line="1" Column="1" />
+      <File FileName="Assets/CodePiece.cs" Line="1" Column="1" />
+      <File FileName="Assets/MakePlatform.cs" Line="28" Column="16" />
+      <File FileName="Assets/syntaxStructure.xml" Line="1" Column="1" />
+      <File FileName="Assets/ValidSyntax.xml" Line="1" Column="1" />
+      <File FileName="Assets/CamControl.js" Line="4" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
