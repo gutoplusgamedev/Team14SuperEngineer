@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\CamControl.js" />
      <Compile Include="Assets\PlayerControl.js" />
+     <Compile Include="Assets\Visable.js" />
      <Compile Include="Assets\collectable.js" />
      <Compile Include="Assets\gameMaster.js" />
      <None Include="Assets\ValidSyntax.xml" />
