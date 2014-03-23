@@ -1,18 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MakePlatform.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\gameMaster.js">
     <Files>
-      <File FileName="Assets\Visable.js" Line="4" Column="2" />
-      <File FileName="Assets\Visable.js" Line="1" Column="1" />
-      <File FileName="Assets\MakePlatform.cs" Line="56" Column="25" />
-      <File FileName="Assets\collectable.js" Line="1" Column="1" />
-      <File FileName="Assets\gameMaster.js" Line="1" Column="1" />
-      <File FileName="Assets\Code.cs" Line="1" Column="1" />
-      <File FileName="Assets\CodePiece.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerControl.js" Line="1" Column="1" />
       <File FileName="Assets\syntaxStructure.xml" Line="1" Column="1" />
       <File FileName="Assets\ValidSyntax.xml" Line="1" Column="1" />
-      <File FileName="Assets\CamControl.js" Line="1" Column="1" />
-      <File FileName="Assets\PlayerControl.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\gameMaster.js" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
