@@ -8,5 +8,5 @@ function Update(){
 
 function OnGUI()
 {
-	GUI.Box(new Rect(Screen.height*1.1, Screen.width*.05,100 , 50), "Score: ");
+	GUI.Box(new Rect(Screen.height*1.1, Screen.width*.05,100 , 50), "Score: " + currentScore);
 }
