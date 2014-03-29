@@ -1,15 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/CharController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenu.cs">
     <Files>
-      <File FileName="Assets/Resources/CharController.cs" Line="9" Column="33" />
-      <File FileName="Assets/ValidSyntax.xml" Line="1" Column="1" />
-      <File FileName="Assets/CodePiece.cs" Line="1" Column="1" />
-      <File FileName="Assets/CodeStructures.cs" Line="21" Column="2" />
-      <File FileName="Assets/DataParser.cs" Line="1" Column="1" />
-      <File FileName="Assets/StructureHolder.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/syntaxStructure.xml" Line="1" Column="1" />
-      <File FileName="Assets/Resources/CharController.cs" Line="25" Column="1" />
+      <File FileName="Assets/SyntaxCollector.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="26" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

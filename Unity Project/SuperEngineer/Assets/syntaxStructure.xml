@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<syntaxStructure>
+	<code type = "If" allowedStructures = "Statement">
+		<structure>
+			<syntax>if</syntax>
+			<syntax>(</syntax>
+			<syntax>booleanExpression</syntax>				
+			<syntax>)</syntax>
+			<syntax>{</syntax>
+			<syntax>@Statement</syntax>
+			<syntax>}</syntax>
+			<syntax>;</syntax>
+		</structure>
+	</code>
+
+	<code type = "ElseIf" allowedStructures = "Statement">
+		<structure>
+			<syntax>else if</syntax>
+			<syntax>(</syntax>
+			<syntax>booleanExpression</syntax>
+			<syntax>)</syntax>
+			<syntax>{</syntax>
+			<syntax>@Statement</syntax>
+			<syntax>}</syntax>
+			<syntax>;</syntax>
+		</structure>
+	</code>
+
+	<code type = "Else" allowedStructures = "Statement">
+		<structure>
+			<syntax>else</syntax>
+			<syntax>{</syntax>
+			<syntax>@Statement</syntax>
+			<syntax>}</syntax>
+			<syntax>;</syntax>
+		</structure>
+	</code>
+
+	<code type = "Method" allowedStructures = "If Statement">
+		<structure>
+			<syntax>returnType</syntax>
+			<syntax>functionName</syntax>
+			<syntax>(</syntax>
+			<syntax>arguments</syntax>
+			<syntax>)</syntax>
+			<syntax>{</syntax>
+			<syntax>If</syntax>
+			<syntax>@Statement</syntax>
+			<syntax>}</syntax>
+			<syntax>;</syntax>
+		</structure>
+	</code>
+
+	<code type = "Class" allowedStructures = "Method VariableDefinition">
+		<structure>
+			<syntax>class</syntax>
+			<syntax>className</syntax>
+			<syntax>{</syntax>
+			<syntax>@VariableDefinition</syntax>
+			<syntax>@Method</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>class</syntax>
+			<syntax>className</syntax>
+			<syntax>:</syntax>
+			<syntax>subClass</syntax>
+			<syntax>{</syntax>
+			<syntax>@VariableDefinition</syntax>
+			<syntax>@Method</syntax>
+			<syntax>}</syntax>
+		</structure>
+	</code>
+
+	<code type = "VariableDefinition">
+		<structure>
+			<syntax>public</syntax>
+			<syntax>variableName</syntax>
+			<syntax>=</syntax>
+			<syntax>variableValue</syntax>
+			<syntax>;</syntax>
+		</structure>
+		<structure>
+			<syntax>private</syntax>
+			<syntax>variableName</syntax>
+			<syntax>=</syntax>
+			<syntax>variableValue</syntax>
+			<syntax>;</syntax>
+		</structure>
+		<structure>
+			<syntax>static</syntax>
+			<syntax>variableName</syntax>
+			<syntax>=</syntax>
+			<syntax>variableValue</syntax>
+			<syntax>;</syntax>
+		</structure>
+	</code>
+
+	<code type = "Statement">
+		<structure>
+			<syntax>variableName</syntax>
+			<syntax>=</syntax>
+			<syntax>variableValue</syntax>
+			<syntax>;</syntax>
+		</structure>
+		<structure>
+			<syntax>Method</syntax>
+			<syntax>(</syntax>
+			<syntax>)</syntax>
+			<syntax>;</syntax>
+		</structure>
+		<structure>
+			<syntax>return</syntax>
+			<syntax>SomeValidType</syntax>
+			<syntax>;</syntax>
+		</structure>
+		<structure>
+			<syntax>continue</syntax>
+			<syntax>;</syntax>
+		</structure>
+	</code>
+</syntaxStructure>

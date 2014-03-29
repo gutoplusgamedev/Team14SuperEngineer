@@ -48,13 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MakePlatform.cs" />
-     <Compile Include="Assets\Scripts\SyntaxDecoder\Code.cs" />
-     <Compile Include="Assets\Scripts\SyntaxDecoder\CodePiece.cs" />
-     <Compile Include="Assets\Scripts\SyntaxDecoder\CodeStructures.cs" />
-     <Compile Include="Assets\Scripts\SyntaxDecoder\DataParser.cs" />
-     <Compile Include="Assets\Scripts\SyntaxDecoder\StructureHolder.cs" />
      <Compile Include="Assets\SyntaxCollector.cs" />
      <Compile Include="Assets\pointGui.cs" />
+     <None Include="Assets\syntaxStructure.xml" />
      <None Include="Assets\ValidSyntax.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
