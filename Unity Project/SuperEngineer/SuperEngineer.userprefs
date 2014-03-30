@@ -1,17 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlatformController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerControl.js">
     <Files>
-      <File FileName="Assets/ValidSyntax.xml" Line="25" Column="12" />
-      <File FileName="Assets/CodePiece.cs" Line="1" Column="1" />
-      <File FileName="Assets/CodeStructures.cs" Line="1" Column="1" />
-      <File FileName="Assets/DataParser.cs" Line="1" Column="1" />
-      <File FileName="Assets/StructureHolder.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlatformController.cs" Line="16" Column="25" />
+      <File FileName="Assets/ValidSyntax.xml" Line="1" Column="1" />
       <File FileName="Assets/Resources/syntaxStructure.xml" Line="1" Column="1" />
-      <File FileName="../../../../../../../../../EECE78/Assets/Character.cs" Line="20" Column="3" />
+      <File FileName="../../../../../../../../../EECE78/Assets/Character.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/pointGui.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MakePlatform.cs" Line="44" Column="38" />
-      <File FileName="Assets/Scripts/PlatformController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MakePlatform.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlatformController.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/PlayerControl.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
