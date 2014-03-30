@@ -12,12 +12,8 @@ public class MakePlatform : MonoBehaviour
 	public GameObject[] trees1;
 	private float counter;	//keeps track of the time so we create a new object every 1 second
 	private float treecounter;
-	private float xPos; //keeps track of where we are in x
+	public static float currentDisplacement; //keeps track of where we are in x
 	private float xPostree;
-
-	private GameObject[] currentPlatform;
-	private GameObject[] currentTree;
-	private GameObject[] currentTree1;
 	private int i; //so we can destroy objects
 	private int j;
 	private int k;
@@ -29,18 +25,13 @@ public class MakePlatform : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		currentPlatform = new GameObject[platforms.Length];
-		currentTree = new GameObject[trees.Length];
-		currentTree1 = new GameObject[trees1.Length];
-		counter = 0;
-		treecounter = 0;
-		i = 0;
-		j = 0;
-		k = 0;
-		xPos = 0;
-		xPostree = 0;
+		ParseSyntaxInformation ();
+		InitializePlatforms (5);
+		StartCoroutine (CreationCoroutine ());
+	}
 
-		//parsing
+	void ParseSyntaxInformation ()
+	{
 		XmlDocument doc = new XmlDocument();
 		doc.Load("Assets/ValidSyntax.xml");
 		XmlNodeList nodes = doc.DocumentElement.SelectNodes("/validSyntax/symbol");
@@ -55,79 +46,29 @@ public class MakePlatform : MonoBehaviour
 			z++;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+	void InstantiatePlatform ()
 	{
-		counter += Time.deltaTime;
-		treecounter += Time.deltaTime;
-		if (counter > 0.6) 
+		GameObject platform = platforms [Random.Range (0, platforms.Length)];
+		Instantiate (platform, new Vector3(currentDisplacement, 0, 0), Quaternion.Euler (270, 0, 270));
+		currentDisplacement += 7.3f;
+	}
+
+	void InitializePlatforms (int howMany)
+	{
+		for (int i = 0; i < howMany; i++) 
 		{
-			xPos += 7.3f;
-
-			counter = 0;
-
-			i++;
-			i = i % platforms.Length;
-
-			int platformNumber = Random.Range (0, platforms.Length);
-			//int platformNumber = i;
-			currentPlatform[i] = (GameObject) Instantiate (platforms [platformNumber], new Vector3(xPos,0,0), Quaternion.Euler (270, 0, 270));
-
-			GameObject go;
-
-			//spawns at different place
-			//depending on the platformn
-			switch(platformNumber)
-			{
-			case 0:
-				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos-1,2,0), Quaternion.Euler (0, 0, 0));
-				break;
-			case 1:
-				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos-2,2,0), Quaternion.Euler (0, 0, 0));//ok
-				break;
-			case 2:
-				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos+1.5f,3,0), Quaternion.Euler (0, 0, 0));//ok
-				break;
-			case 3:
-				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos+1,2,0), Quaternion.Euler (0, 0, 0));
-				break;
-			case 4:
-				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos,5,0), Quaternion.Euler (0, 0, 0));
-				break;
-			default:
-				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos,2,0), Quaternion.Euler (0, 0, 0));
-				break;
-			}
-
-			//5/6 chance to spawn text
-			if (Random.Range (0,6) < 5)
-				go.GetComponent<TextMesh>().text = parsedSyntax[Random.Range (0, parsedSyntax.Length)];
-			else
-				Destroy (go);
-
-
-		}
-		if (treecounter > 0.38) 
-		{
-			treecounter = 0;
-			xPostree += 3.3f;
-
-			j++;
-			k++;
-
-			j = j % trees.Length;
-			k = k % trees1.Length;
-
-
-			int treeNumber = Random.Range( 0,trees.Length);
-			int treeNumber1 = Random.Range( 0,trees1.Length);
-			currentTree[j] = (GameObject) Instantiate(trees [treeNumber], new Vector3(xPostree,0,5), Quaternion.Euler (270, 0, 270));
-			currentTree1[k] = (GameObject) Instantiate(trees1 [treeNumber1], new Vector3(xPostree,0,-5), Quaternion.Euler (270, 0, 270));
-
-
+			InstantiatePlatform ();
 		}
 	}
 
+	IEnumerator CreationCoroutine ()
+	{
+		while (true) 
+		{
+			InstantiatePlatform ();
+			yield return new WaitForSeconds (0.6f);
+		}
+	}
 }
 
