@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using System.Xml;
+using System.IO;
+using System.Text;
+
 public class MakePlatform : MonoBehaviour 
 {
 	public GameObject[] platforms; //create platform of this type
@@ -17,6 +21,11 @@ public class MakePlatform : MonoBehaviour
 	private int i; //so we can destroy objects
 	private int j;
 	private int k;
+
+	private string[] parsedSyntax;
+	private GameObject[] currentSyntax;
+	public GameObject floatingSyntax;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -30,6 +39,21 @@ public class MakePlatform : MonoBehaviour
 		k = 0;
 		xPos = 0;
 		xPostree = 0;
+
+		//parsing
+		XmlDocument doc = new XmlDocument();
+		doc.Load("Assets/ValidSyntax.xml");
+		XmlNodeList nodes = doc.DocumentElement.SelectNodes("/validSyntax/symbol");
+		
+		parsedSyntax = new string[nodes.Count];
+		
+		int z = 0;
+		foreach (XmlNode node in nodes)
+		{
+			//Debug.Log(string.Format("{0}", node.InnerText));
+			parsedSyntax[z] = node.InnerText;
+			z++;
+		}
 	}
 	
 	// Update is called once per frame
@@ -42,14 +66,45 @@ public class MakePlatform : MonoBehaviour
 			xPos += 7.3f;
 
 			counter = 0;
+
 			i++;
-
 			i = i % platforms.Length;
-	
-
 
 			int platformNumber = Random.Range (0, platforms.Length);
+			//int platformNumber = i;
 			currentPlatform[i] = (GameObject) Instantiate (platforms [platformNumber], new Vector3(xPos,0,0), Quaternion.Euler (270, 0, 270));
+
+			GameObject go;
+
+			//spawns at different place
+			//depending on the platformn
+			switch(platformNumber)
+			{
+			case 0:
+				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos-1,2,0), Quaternion.Euler (0, 0, 0));
+				break;
+			case 1:
+				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos-2,2,0), Quaternion.Euler (0, 0, 0));//ok
+				break;
+			case 2:
+				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos+1.5f,3,0), Quaternion.Euler (0, 0, 0));//ok
+				break;
+			case 3:
+				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos+1,2,0), Quaternion.Euler (0, 0, 0));
+				break;
+			case 4:
+				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos,5,0), Quaternion.Euler (0, 0, 0));
+				break;
+			default:
+				go = (GameObject) Instantiate (floatingSyntax, new Vector3(xPos,2,0), Quaternion.Euler (0, 0, 0));
+				break;
+			}
+
+			//5/6 chance to spawn text
+			if (Random.Range (0,6) < 5)
+				go.GetComponent<TextMesh>().text = parsedSyntax[Random.Range (0, parsedSyntax.Length)];
+			else
+				Destroy (go);
 
 
 		}

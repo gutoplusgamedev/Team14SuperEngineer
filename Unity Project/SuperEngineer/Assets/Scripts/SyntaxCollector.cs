@@ -5,17 +5,21 @@ using System.Collections.Generic;
 public class SyntaxCollector : MonoBehaviour {
 	
 	public int pointsPerSyntax = 10;
-	public int pointsPerCompletion = 50;
+	public int pointsPerSyntaxCompletion = 10;
 	public int pointsPerSecond = 1;
 	public int pointsPerIncorrect = -10;
+	public int maxIncorrectSyntax = 5;
+
+	public static int deathCounter;
 	public static int points;
-	
-	private List<string> syntaxCollection;
+	public static List<string> syntaxCollection = null;
+
 	private float counter;
 	
 	// Use this for initialization
 	void Start() 
 	{
+		deathCounter = maxIncorrectSyntax;
 		points = 0;
 		counter = 0;
 		syntaxCollection = new List<string>();
@@ -43,15 +47,21 @@ public class SyntaxCollector : MonoBehaviour {
 			//{
 			//	points += pointsPerIncorrect;
 			//	syntaxCollection = new List<string> ();
+			//	deathCounter--;
+			//	if (DeathCounter == 0)
+			//	{
+			//		//die!
+			//	}
 			//}
+			//else
+			//
+				points += pointsPerSyntax;
 			
 			//if (done)
 			//{
-			//	points += pointsPerCompletion;
+			//	points += syntaxCollection.Count * pointsPerSyntaxCompletion;
 			//	syntaxCollection = new List<string> ();
 			//}
-			
-			points += pointsPerSyntax;
 		}
 	}
 }
