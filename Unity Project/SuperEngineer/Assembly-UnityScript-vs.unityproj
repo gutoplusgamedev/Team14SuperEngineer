@@ -51,8 +51,8 @@
      <Compile Include="Assets\Scripts\Visable.js" />
      <Compile Include="Assets\Scripts\collectable.js" />
      <Compile Include="Assets\Scripts\gameMaster.js" />
-     <None Include="Assets\syntaxStructure.xml" />
      <None Include="Assets\ValidSyntax.xml" />
+     <None Include="Assets\syntaxStructure.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

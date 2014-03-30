@@ -50,8 +50,8 @@
      <Compile Include="Assets\Scripts\MakePlatform.cs" />
      <Compile Include="Assets\SyntaxCollector.cs" />
      <Compile Include="Assets\pointGui.cs" />
-     <None Include="Assets\syntaxStructure.xml" />
      <None Include="Assets\ValidSyntax.xml" />
+     <None Include="Assets\syntaxStructure.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

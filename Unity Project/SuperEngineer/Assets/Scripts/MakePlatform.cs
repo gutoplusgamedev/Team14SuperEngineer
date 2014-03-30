@@ -37,7 +37,7 @@ public class MakePlatform : MonoBehaviour
 	{
 		counter += Time.deltaTime;
 		treecounter += Time.deltaTime;
-		if (counter > 0.7) 
+		if (counter > 0.6) 
 		{
 			xPos += 7.3f;
 
