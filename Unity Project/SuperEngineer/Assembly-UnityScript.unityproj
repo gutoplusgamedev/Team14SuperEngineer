@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Visable.js" />
      <Compile Include="Assets\Scripts\collectable.js" />
      <Compile Include="Assets\Scripts\gameMaster.js" />
+     <Compile Include="Assets\playerLighting.js" />
      <None Include="Assets\ValidSyntax.xml" />
      <None Include="Assets\syntaxStructure.xml" />
   </ItemGroup>
