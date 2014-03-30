@@ -4,6 +4,9 @@
 private var moveSpeed : float = 7;
 private var jumpSpeed:	float = 15;
 
+var jumpAudio : AudioClip;
+private var isJumping = false;
+
 var distToGround : float;
 
 function Start () {
@@ -20,6 +23,7 @@ rigidbody.velocity.x = moveSpeed;
 
 if( (Input.GetKeyDown(KeyCode.W)) && (IsGrounded () || IsGrounded1 () || IsGrounded2 () )                ) {
 animation.Play("Jump", PlayMode.StopAll);
+PlayAudio();
 rigidbody.velocity.y = jumpSpeed;
 
 }
@@ -43,4 +47,19 @@ function IsGrounded2 () : boolean { //Check if we are on the ground. Return true
 		return Physics.Raycast(transform.position + Vector3(1,-.2,0), -Vector3.up, distToGround + 0.1);	
 }
 
+function OnCollisionStay ()
+{
+if (isJumping== true) 
+{
+audio.clip = jumpAudio;
+audio.Play();
+isJumping = false;
+}
+
+}
+function PlayAudio() 
+{
+yield WaitForSeconds(0.2);
+isJumping = true;
+}
 

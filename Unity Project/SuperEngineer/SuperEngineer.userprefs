@@ -1,9 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerControl.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/gameMaster.js">
     <Files>
-      <File FileName="Assets\Scripts\PlayerControl.js" Line="22" Column="40" />
-      <File FileName="..\..\..\..\..\AppData\Local\Temp\Rar$DRa0.007\MAG Assets\Scripts\Video12\BallControl.js" Line="14" Column="22" />
+      <File FileName="Assets/Scripts/PlayerControl.js" Line="14" Column="33" />
+      <File FileName="Assets/PlayerControl(new).js" Line="1" Column="1" />
+      <File FileName="Assets/AboutUs.cs" Line="1" Column="1" />
+      <File FileName="Assets/Back.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Visable.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/gameMaster.js" Line="15" Column="2" />
+      <File FileName="Assets/Scripts/PauseMenu.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/gameMaster(new).js" Line="15" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
