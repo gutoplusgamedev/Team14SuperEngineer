@@ -8,8 +8,14 @@ public class PlayerControl : MonoBehaviour
 	public float velocity;
 	public static PlayerControl PlayerInstance;
 
-	void Start ()
+	public bool IsGrounded 
 	{
+		get { return Physics.Raycast (transform.position, -Vector3.up, 1.7f); }
+	}
+
+	void Start()
+	{
+		animation ["Jump"].speed = 0.5f;
 		PlayerInstance = this;
 	}
 
@@ -26,7 +32,7 @@ public class PlayerControl : MonoBehaviour
 
 		transform.position += Vector3.right * Time.deltaTime * velocity;
 
-		if (Input.GetKey (KeyCode.W)) 
+		if (Input.GetKey (KeyCode.W) && this.IsGrounded) 
 		{
 			StartCoroutine (Jump ());
 		}
@@ -38,7 +44,8 @@ public class PlayerControl : MonoBehaviour
 		{
 			_isJumping = true;
 			rigidbody.velocity = new Vector3 (0, jumpForce, 0);
-			while (!Physics.Raycast (transform.position, -Vector3.up, 1.5f))
+			yield return new WaitForSeconds (1);
+			while (!this.IsGrounded)
 			{
 				yield return new WaitForEndOfFrame ();
 			}

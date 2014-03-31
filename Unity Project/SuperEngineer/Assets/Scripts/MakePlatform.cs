@@ -12,7 +12,7 @@ public class MakePlatform : MonoBehaviour
 	public GameObject[] trees1;
 	private float counter;	//keeps track of the time so we create a new object every 1 second
 	private float treecounter;
-	public static float currentDisplacement; //keeps track of where we are in x
+	public static float currentDisplacement = -10; //keeps track of where we are in x
 	private float xPostree;
 	private int i; //so we can destroy objects
 	private int j;
@@ -51,7 +51,7 @@ public class MakePlatform : MonoBehaviour
 	{
 		GameObject platform = platforms [Random.Range (0, platforms.Length)];
 		Instantiate (platform, new Vector3(currentDisplacement, 0, 0), Quaternion.Euler (270, 0, 270));
-		currentDisplacement += 7.3f;
+		currentDisplacement += 4.345427f;
 	}
 
 	void InitializePlatforms (int howMany)
@@ -67,7 +67,7 @@ public class MakePlatform : MonoBehaviour
 		while (true) 
 		{
 			InstantiatePlatform ();
-			yield return new WaitForSeconds (0.6f);
+			yield return new WaitForSeconds (PlayerControl.PlayerInstance.velocity);
 		}
 	}
 }

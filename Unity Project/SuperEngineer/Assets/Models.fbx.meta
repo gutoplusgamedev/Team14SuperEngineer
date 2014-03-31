@@ -14,6 +14,13 @@ ModelImporter:
     100016: Cube_005
     100018: Cube_006
     100020: //RootNode
+    100022: Platform
+    100024: Platform_001
+    100026: Platform_002
+    100028: Platform_003
+    100030: Rock
+    100032: Tree
+    100034: Tree_001
     400000: Circle
     400002: Circle_001
     400004: Circle_002
@@ -25,6 +32,13 @@ ModelImporter:
     400016: Cube_005
     400018: Cube_006
     400020: //RootNode
+    400022: Platform
+    400024: Platform_001
+    400026: Platform_002
+    400028: Platform_003
+    400030: Rock
+    400032: Tree
+    400034: Tree_001
     2300000: Circle
     2300002: Circle_001
     2300004: Circle_002
@@ -35,6 +49,13 @@ ModelImporter:
     2300014: Cube_004
     2300016: Cube_005
     2300018: Cube_006
+    2300020: Platform
+    2300022: Platform_001
+    2300024: Platform_002
+    2300026: Platform_003
+    2300028: Rock
+    2300030: Tree
+    2300032: Tree_001
     3300000: Circle
     3300002: Circle_001
     3300004: Circle_002
@@ -45,6 +66,13 @@ ModelImporter:
     3300014: Cube_004
     3300016: Cube_005
     3300018: Cube_006
+    3300020: Platform
+    3300022: Platform_001
+    3300024: Platform_002
+    3300026: Platform_003
+    3300028: Rock
+    3300030: Tree
+    3300032: Tree_001
     4300000: Circle_002
     4300002: Cube_006
     4300004: Circle_001
@@ -55,6 +83,13 @@ ModelImporter:
     4300014: Cube_002
     4300016: Cube_001
     4300018: Cube
+    4300020: Tree_001
+    4300022: Rock
+    4300024: Tree
+    4300026: Platform_003
+    4300028: Platform_001
+    4300030: Platform
+    4300032: Platform_002
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -75,7 +110,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .600000024
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
