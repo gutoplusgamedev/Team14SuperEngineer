@@ -67,7 +67,7 @@ public class MakePlatform : MonoBehaviour
 		while (true) 
 		{
 			InstantiatePlatform ();
-			yield return new WaitForSeconds (PlayerControl.PlayerInstance.velocity);
+			yield return new WaitForSeconds (PlayerControl.PlayerInstance.velocity * 0.5f);
 		}
 	}
 }

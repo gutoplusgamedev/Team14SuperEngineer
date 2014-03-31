@@ -10,17 +10,25 @@ public class PlayerControl : MonoBehaviour
 
 	public bool IsGrounded 
 	{
-		get { return Physics.Raycast (transform.position, -Vector3.up, 1.7f); }
+		get { return Physics.Raycast (transform.position, -Vector3.up, 2f); }
 	}
 
 	void Start()
 	{
 		animation ["Jump"].speed = 0.5f;
 		PlayerInstance = this;
+		GapDetector.OnPlayerCollision += OnPlayerCollidedWithGap;
+	}
+
+	void OnDisable ()
+	{
+		GapDetector.OnPlayerCollision -= OnPlayerCollidedWithGap;
 	}
 
 	void Update ()
 	{
+		print ("IsGrounded = " + this.IsGrounded);
+
 		if (!_isJumping) 
 		{
 			animation.CrossFade ("RunCycle", 0.2f);
@@ -32,7 +40,7 @@ public class PlayerControl : MonoBehaviour
 
 		transform.position += Vector3.right * Time.deltaTime * velocity;
 
-		if (Input.GetKey (KeyCode.W) && this.IsGrounded) 
+		if (Input.GetKeyDown (KeyCode.W) && this.IsGrounded) 
 		{
 			StartCoroutine (Jump ());
 		}
@@ -51,5 +59,15 @@ public class PlayerControl : MonoBehaviour
 			}
 			_isJumping = false;
 		}
+	}
+
+	void OnPlayerCollidedWithGap ()
+	{
+		OnDie ();
+	}
+
+	void OnDie ()
+	{
+		this.enabled = false;
 	}
 }

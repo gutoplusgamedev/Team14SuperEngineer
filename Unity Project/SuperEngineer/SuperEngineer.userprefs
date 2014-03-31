@@ -2,14 +2,16 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MakePlatform.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlatformController.cs" Line="18" Column="5" />
+      <File FileName="Assets/Scripts/PlatformController.cs" Line="1" Column="1" />
       <File FileName="Assets/ValidSyntax.xml" Line="1" Column="1" />
       <File FileName="Assets/Resources/syntaxStructure.xml" Line="1" Column="1" />
       <File FileName="../../../../../../../../../EECE78/Assets/Character.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/pointGui.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MakePlatform.cs" Line="49" Column="2" />
+      <File FileName="Assets/Scripts/MakePlatform.cs" Line="70" Column="81" />
       <File FileName="Assets/Scripts/PlayerControl.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerControl.cs" Line="13" Column="69" />
+      <File FileName="Assets/Scripts/PlayerControl.cs" Line="13" Column="66" />
+      <File FileName="Assets/Scripts/GapDetector.cs" Line="6" Column="16" />
+      <File FileName="Assets/Scripts/CamControl.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

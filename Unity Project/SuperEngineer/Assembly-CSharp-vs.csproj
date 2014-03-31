@@ -49,6 +49,8 @@
      <Compile Include="Assets\AboutUs.cs" />
      <Compile Include="Assets\Back.cs" />
      <Compile Include="Assets\Resources\CharController.cs" />
+     <Compile Include="Assets\Scripts\CamControl.cs" />
+     <Compile Include="Assets\Scripts\GapDetector.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MakePlatform.cs" />
      <Compile Include="Assets\Scripts\PlatformController.cs" />
