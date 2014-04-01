@@ -32,11 +32,24 @@ public class MakePlatform : MonoBehaviour
 		}
 	}
 
+	void InstantiatePlatform (int index)
+	{
+		GameObject platform = platforms [index];
+		Vector3 position = new Vector3 (currentDisplacement, 0, 0);
+		Instantiate (platform, position, Quaternion.Euler (270, 0, 270));
+		InstantiateBackground ();
+		currentDisplacement += 4.345427f;
+		if (OnPlatformInstantiated != null) 
+		{
+			OnPlatformInstantiated (position, new Vector3 (currentDisplacement, 0, 0));
+		}
+	}
+
 	void InitializePlatforms (int howMany)
 	{
 		for (int i = 0; i < howMany; i++) 
 		{
-			InstantiatePlatform ();
+			InstantiatePlatform (1);
 		}
 	}
 

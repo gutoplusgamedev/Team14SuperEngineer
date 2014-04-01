@@ -29,7 +29,7 @@ public class SyntaxInstantiator : MonoBehaviour
 
 	void OnDisable ()
 	{
-		MakePlatform.OnPlatformInstantiated += OnPlatformInstantiated;
+		MakePlatform.OnPlatformInstantiated -= OnPlatformInstantiated;
 	}
 
 	void OnPlatformInstantiated (Vector3 position, Vector3 finalPosition)
