@@ -94,9 +94,24 @@
 
 	<code type = "Statement">
 		<structure>
-			<syntax>variableName</syntax>
+			<syntax>int</syntax>
+			<syntax>var_name</syntax>
 			<syntax>=</syntax>
-			<syntax>variableValue</syntax>
+			<syntax>10</syntax>
+			<syntax>;</syntax>
+		</structure>
+		<structure>
+			<syntax>float</syntax>
+			<syntax>var_name</syntax>
+			<syntax>=</syntax>
+			<syntax>3.1</syntax>
+			<syntax>;</syntax>
+		</structure>
+		<structure>
+			<syntax>string</syntax>
+			<syntax>var_name</syntax>
+			<syntax>=</syntax>
+			<syntax>"string value"</syntax>
 			<syntax>;</syntax>
 		</structure>
 		<structure>

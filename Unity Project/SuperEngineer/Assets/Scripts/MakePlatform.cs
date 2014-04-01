@@ -14,6 +14,7 @@ public class MakePlatform : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		currentDisplacement = -10;
 		InitializePlatforms (5);
 		StartCoroutine (CreationCoroutine ());
 	}

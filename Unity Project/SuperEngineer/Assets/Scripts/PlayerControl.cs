@@ -13,8 +13,28 @@ public class PlayerControl : MonoBehaviour
 		get { return Physics.Raycast (transform.position, -Vector3.up, 2f); }
 	}
 
+	public void ChangeRagdoll (bool state)
+	{
+		Rigidbody[] rbs = GetComponentsInChildren<Rigidbody> ();
+		Collider[] cs = GetComponentsInChildren <Collider> ();
+		CharacterJoint[] joints = GetComponentsInChildren <CharacterJoint> ();
+		foreach (Rigidbody r in rbs) 
+		{
+			if (r.gameObject.tag != "CharRoot")
+				r.useGravity = state;
+		}
+
+		foreach (Collider c in cs) 
+		{
+			if(c.gameObject.tag != "CharRoot")
+				c.enabled = state;
+		}
+
+	}
+
 	void Awake()
 	{
+		ChangeRagdoll (false);
 		animation ["Jump"].speed = 0.5f;
 		PlayerInstance = this;
 		GapDetector.OnPlayerCollision += OnPlayerCollidedWithGap;
@@ -66,8 +86,9 @@ public class PlayerControl : MonoBehaviour
 
 	IEnumerator OnDie ()
 	{
+		ChangeRagdoll (true);
 		this.enabled = false;
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (4);
 		GameOver.OnGameOver ();
 	}
 }

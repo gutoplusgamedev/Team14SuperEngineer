@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AboutUs.cs" />
      <Compile Include="Assets\Scripts\Back.cs" />
+     <Compile Include="Assets\Scripts\BeetleController.cs" />
      <Compile Include="Assets\Scripts\CamControl.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />

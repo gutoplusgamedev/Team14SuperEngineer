@@ -5,6 +5,11 @@ public class GameMaster : MonoBehaviour
 {
 	public static int points;
 
+	void Start ()
+	{
+		points = 0;
+	}
+
 	void OnGUI ()
 	{
 		GUI.skin.textArea.alignment = TextAnchor.MiddleCenter;

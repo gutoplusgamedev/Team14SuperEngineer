@@ -21,7 +21,7 @@ public class PropCreator: MonoBehaviour
 	void OnPlatformInstantiated (Vector3 position, Vector3 finalPosition)
 	{
 		InstantiateTrees (Random.Range (1, 5), position, finalPosition);
-		InstantiateRocks (Random.Range (3, 6), position, finalPosition);
+		InstantiateRocks (Random.Range (1, 6), position, finalPosition);
 	}
 
 	void InstantiateTrees (int howMany, Vector3 from, Vector3 to)
@@ -53,6 +53,6 @@ public class PropCreator: MonoBehaviour
 	{
 		Quaternion rot = Quaternion.Euler (new Vector3 (-90, Random.Range (0, 270), 0));
 		GameObject newRock = (GameObject)Instantiate (rock, position, rot);
-		newRock.transform.localScale = Vector3.one * Random.Range (0.17f, 0.3f);
+		newRock.transform.localScale = Vector3.one * Random.Range (0.3f, 1f);
 	}
 }

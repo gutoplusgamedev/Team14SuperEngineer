@@ -10,10 +10,12 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 95: {fileID: 9500000}
+  - 65: {fileID: 6500000}
   - 114: {fileID: 11400000}
-  - 64: {fileID: 6400000}
+  - 54: {fileID: 5400000}
   m_Layer: 0
-  m_Name: Skybox
+  m_Name: VwBeetle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +27,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -.5, y: -.5, z: -.500000119, w: .49999994}
-  m_LocalPosition: {x: 18.2115536, y: -1.18535924, z: 4.12624788}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: 60.8732338, y: 15.6827126, z: -21.3044586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +44,8 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ea738d3d2ed304e328d0761c1c7c35bb, type: 2}
+  - {fileID: 2100000, guid: 9a8923747be0d4a9f9d5f179888a4397, type: 2}
+  - {fileID: 2100000, guid: ddbc63433ee194899962ab43e3d56e5a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -57,9 +60,24 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 4300000, guid: 73c54bc7c1e53440ab8484248d60e00f, type: 3}
---- !u!64 &6400000
-MeshCollider:
+  m_Mesh: {fileID: 4300000, guid: 164f27b2d0a60445ba5da98d63fb4090, type: 3}
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 10
+  m_CollisionDetection: 0
+--- !u!65 &6500000
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -68,9 +86,22 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 73c54bc7c1e53440ab8484248d60e00f, type: 3}
+  m_Size: {x: 2.1968751, y: 5.3791399, z: 2.43806481}
+  m_Center: {x: .00105720758, y: -.0458075963, z: .27442494}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 164f27b2d0a60445ba5da98d63fb4090, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,9 +110,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6814f173914452389721c7b3d094c3, type: 3}
+  m_Script: {fileID: 11500000, guid: ddc33ef7979574aca97359e7b6ed73ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smokeParticle: {fileID: 100000, guid: cc20ddf435a9e4d638670cd1167462b0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
