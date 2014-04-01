@@ -8,7 +8,7 @@ public class SyntaxCollector : MonoBehaviour {
 	public int pointsPerSyntaxCompletion = 10;
 	public int pointsPerSecond = 1;
 	public int pointsPerIncorrect = -10;
-	public int maxIncorrectSyntax = 5;
+	public int maxIncorrectSyntax = 1;
 
 	public static int deathCounter;
 	public static int points;
@@ -64,12 +64,12 @@ public class SyntaxCollector : MonoBehaviour {
 			if (!StructureHolder.IsCorrect (syntaxCollection, out done)) 
 			{
 				GameMaster.points += pointsPerIncorrect;
-				DialogueController.ShowDialogueBox = true;
+				DialogueController.GenerateDialogue (false);
 				syntaxCollection = new List<string> ();
 				deathCounter--;
 				if (deathCounter == 0)
 				{
-					GameOver.OnGameOver ();
+					StartCoroutine (GameOver.OnGameOverDueToGettingWrongSyntax ());
 				}
 			}
 			else
@@ -79,6 +79,7 @@ public class SyntaxCollector : MonoBehaviour {
 				if (done)
 				{
 					GameMaster.points += syntaxCollection.Count * pointsPerSyntaxCompletion;
+					DialogueController.GenerateDialogue (true);
 					syntaxCollection = new List<string> ();
 				}
 			}

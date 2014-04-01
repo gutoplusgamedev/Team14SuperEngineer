@@ -7,4 +7,12 @@ public class GameOver : MonoBehaviour
 	{
 		Application.LoadLevel ("MainMenu");
 	}
+
+	public static IEnumerator OnGameOverDueToGettingWrongSyntax ()
+	{
+		Instantiate (Resources.Load<GameObject> ("VwBeetle"), PlayerControl.PlayerInstance.transform.position + (Vector3.up * 3), Quaternion.identity);
+		Destroy (PlayerControl.PlayerInstance.gameObject);
+		yield return new WaitForSeconds (5);
+		OnGameOver ();
+	}
 }

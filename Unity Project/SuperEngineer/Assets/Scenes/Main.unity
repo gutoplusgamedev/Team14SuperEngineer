@@ -220,13 +220,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 142922707}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -3.11003876, y: 2.55999994, z: .219999999}
+  m_LocalPosition: {x: -3.11003876, y: 1.79321289, z: .219999999}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 1664678966}
   - {fileID: 2051156340}
   - {fileID: 1171849112}
-  - {fileID: 1812615653}
   m_Father: {fileID: 0}
 --- !u!111 &142922709
 Animation:
@@ -935,7 +934,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.398340315, y: .140772387, z: .000713644549}
+  m_ConnectedAnchor: {x: -.398340732, y: .140772387, z: .000713678077}
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_LowTwistLimit:
     limit: -20
@@ -1512,6 +1511,7 @@ GameObject:
   - 4: {fileID: 1079821319}
   - 114: {fileID: 1079821318}
   - 114: {fileID: 1079821320}
+  - 114: {fileID: 1079821321}
   m_Layer: 0
   m_Name: _GM
   m_TagString: Untagged
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1079821317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0817b4e207934fbfb368b46ed712306, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c6bd45576d9546fd8f4e47da7110129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1079821319
@@ -1552,6 +1552,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40c48518daee134b9579455f08a5c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syntaxTexture: {fileID: 2800000, guid: 5e567148bfe754943811617e34fab165, type: 3}
+  pointTexture: {fileID: 2800000, guid: 50bcd9ad8f2b94666a9db9ad81ddf1af, type: 3}
+  skin: {fileID: 11400000, guid: 52226341a8dbe461f81291d12d959480, type: 2}
+--- !u!114 &1079821321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079821317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00efdc2d7d55e404cbfa8ddba3ed2ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 2800000, guid: a79db3c562376411c9d8ac8f54404e3b, type: 3}
+  badDialogueArray:
+  - SRSLY?!
+  - RLY?!
+  - I SAW YOU PLAYING FLAPPY BIRD DURING CLASSES!
+  goodDialogueArray:
+  - IT WAS ABOUT TIME!
+  - FINALLY!!11
+  - I THOUGHT YOU WOULD NEVER MAKE IT!1
 --- !u!1 &1098004626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,7 +1693,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.403611451, y: 1.21304765e-07, z: -5.66244125e-07}
+  m_ConnectedAnchor: {x: -.403611153, y: -1.46930688e-07, z: -5.43892384e-07}
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_LowTwistLimit:
     limit: -90
@@ -1936,7 +1959,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.403610915, y: 1.90921128e-07, z: -7.05942512e-07}
+  m_ConnectedAnchor: {x: -.403611213, y: -4.703179e-08, z: -7.58096576e-07}
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_LowTwistLimit:
     limit: -90
@@ -2299,7 +2322,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.398340315, y: -.140772626, z: .000713730231}
+  m_ConnectedAnchor: {x: -.398340732, y: -.140772626, z: .000713763759}
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_LowTwistLimit:
     limit: -20
@@ -2715,9 +2738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8176c844ea26f45edafe890e2a97c27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromTarget: 3
+  distanceFromTarget: 3.29999995
   lift: 0
-  lookAtTarget: 1
+  xOffset: .300000012
+  lookAtTarget: 0
   target: {fileID: 142922708}
 --- !u!124 &1812615650
 Behaviour:
@@ -2753,7 +2777,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 1.30999994
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2768,11 +2792,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1812615648}
-  m_LocalRotation: {x: -.0353697799, y: -.720359087, z: -.0178689323, w: .692468405}
-  m_LocalPosition: {x: 11.7164049, y: .656824112, z: 1.73377633}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -.0376454554, y: -.0197215993, z: .012374972, w: .999019921}
+  m_LocalPosition: {x: -2.58990622, y: 1.99026012, z: -3.2949214}
+  m_LocalScale: {x: .299999982, y: .300000012, z: .299999982}
   m_Children: []
-  m_Father: {fileID: 142922708}
+  m_Father: {fileID: 0}
 --- !u!1 &1870359696
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ public class DialogueController : MonoBehaviour
 {
 	public Texture2D dialogueBox;
 	private static bool _showDialogueBox;
-	public string[] dialogueArray;
+	public string[] badDialogueArray, goodDialogueArray;
 	private static string _currentDialogue;
 	private static DialogueController _instance;
 
@@ -18,10 +18,23 @@ public class DialogueController : MonoBehaviour
 				_showDialogueBox = value;
 				if (_showDialogueBox) 
 				{
-					_currentDialogue = _instance.dialogueArray [Random.Range (0, _instance.dialogueArray.Length)];
 					_instance.StartCoroutine (_instance.TurnDialoguesOff());
 				}
 			}
+		}
+	}
+
+	public static void GenerateDialogue (bool goodDialogue)
+	{
+		ShowDialogueBox = true;
+
+		if(goodDialogue)
+		{
+			_currentDialogue = _instance.goodDialogueArray[Random.Range (0, _instance.goodDialogueArray.Length)];
+		}
+		else
+		{
+			_currentDialogue = _instance.badDialogueArray[Random.Range (0, _instance.badDialogueArray.Length)];
 		}
 	}
 			

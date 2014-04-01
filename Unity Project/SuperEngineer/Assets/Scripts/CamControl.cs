@@ -11,10 +11,13 @@ public class CamControl : MonoBehaviour
 	
 	void Update () 
 	{
-		transform.position = target.position - (Vector3.forward * distanceFromTarget) + (Vector3.up * lift) + (Vector3.right * xOffset);
-		if(lookAtTarget)
+		if (target != null) 
 		{
-			transform.rotation = Quaternion.LookRotation (target.position - transform.position);
+			transform.position = target.position - (Vector3.forward * distanceFromTarget) + (Vector3.up * lift) + (Vector3.right * xOffset);
+			if (lookAtTarget) 
+			{
+				transform.rotation = Quaternion.LookRotation (target.position - transform.position);
+			}
 		}
 	}
 }

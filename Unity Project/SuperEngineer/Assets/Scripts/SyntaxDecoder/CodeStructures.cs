@@ -45,9 +45,11 @@ public class CodeStructures : Dictionary <StructureType, List<Code>>
 			else
 			{
 				done = c.Count == code.Count;
-				if(FromListToString(c).Contains (FromListToString (code)))
+				string cString = FromListToString (c);
+				string codeString = FromListToString (code);
+				if(cString.StartsWith (codeString) || cString == codeString)
 				{
-					return false;
+					return true;
 				}
 				else
 				{
@@ -67,6 +69,7 @@ public class CodeStructures : Dictionary <StructureType, List<Code>>
 			str += cp.Item;
 		}
 
+		Debug.Log (str);
 		return str;
 	}
 
@@ -78,6 +81,7 @@ public class CodeStructures : Dictionary <StructureType, List<Code>>
 			str += s;
 		}
 
+		Debug.Log (str);
 		return str;
 	}
 }
