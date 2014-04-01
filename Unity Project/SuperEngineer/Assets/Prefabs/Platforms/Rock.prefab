@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Rock
@@ -26,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -.704272091, y: .0632528961, z: .0632528961, w: .704272032}
-  m_LocalPosition: {x: -5.95199966, y: -1.11742449, z: -8.87160492}
+  m_LocalPosition: {x: -6.99941683, y: -1.94499016, z: 6.55253887}
   m_LocalScale: {x: .422079325, y: .422079355, z: .422079265}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,18 +56,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 4300002, guid: 454e8af0a3ec243e385e30e6154b0da3, type: 3}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0832db6bcb97e34092b69b6fd898d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Mesh: {fileID: 4300022, guid: 41a04f11533644159ab5efd506fae3fa, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

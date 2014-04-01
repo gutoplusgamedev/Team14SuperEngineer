@@ -53,9 +53,10 @@
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\GapDetector.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MainMenu1.cs" />
      <Compile Include="Assets\Scripts\MakePlatform.cs" />
-     <Compile Include="Assets\Scripts\PlatformController.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\PropController.cs" />
      <Compile Include="Assets\Scripts\PropCreator.cs" />
      <Compile Include="Assets\Scripts\SyntaxCollector.cs" />
      <Compile Include="Assets\Scripts\SyntaxInstantiator.cs" />

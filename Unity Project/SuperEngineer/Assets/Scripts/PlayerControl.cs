@@ -27,8 +27,6 @@ public class PlayerControl : MonoBehaviour
 
 	void Update ()
 	{
-		print ("IsGrounded = " + this.IsGrounded);
-
 		if (!_isJumping) 
 		{
 			animation.CrossFade ("RunCycle", 0.2f);
