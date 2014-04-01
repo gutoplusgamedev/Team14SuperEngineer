@@ -1,17 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MakePlatform.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GapDetector.cs">
     <Files>
       <File FileName="Assets/Scripts/PlatformController.cs" Line="1" Column="1" />
       <File FileName="Assets/ValidSyntax.xml" Line="1" Column="1" />
       <File FileName="Assets/Resources/syntaxStructure.xml" Line="1" Column="1" />
       <File FileName="../../../../../../../../../EECE78/Assets/Character.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/pointGui.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MakePlatform.cs" Line="70" Column="81" />
-      <File FileName="Assets/Scripts/PlayerControl.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerControl.cs" Line="13" Column="66" />
-      <File FileName="Assets/Scripts/GapDetector.cs" Line="6" Column="16" />
-      <File FileName="Assets/Scripts/CamControl.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MakePlatform.cs" Line="54" Column="67" />
+      <File FileName="Assets/Scripts/PlayerControl.cs" Line="16" Column="12" />
+      <File FileName="Assets/Scripts/GapDetector.cs" Line="14" Column="44" />
+      <File FileName="Assets/Scripts/CamControl.cs" Line="16" Column="88" />
+      <File FileName="Assets/Scripts/PropCreator.cs" Line="41" Column="95" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

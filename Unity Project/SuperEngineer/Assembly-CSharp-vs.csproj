@@ -55,7 +55,9 @@
      <Compile Include="Assets\Scripts\MakePlatform.cs" />
      <Compile Include="Assets\Scripts\PlatformController.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\PropCreator.cs" />
      <Compile Include="Assets\Scripts\SyntaxCollector.cs" />
+     <Compile Include="Assets\Scripts\SyntaxInstantiator.cs" />
      <Compile Include="Assets\Scripts\pointGui.cs" />
      <None Include="Assets\ValidSyntax.xml" />
      <None Include="Assets\syntaxStructure.xml" />

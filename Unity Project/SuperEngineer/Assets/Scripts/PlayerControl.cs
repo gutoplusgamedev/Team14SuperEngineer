@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
 		get { return Physics.Raycast (transform.position, -Vector3.up, 2f); }
 	}
 
-	void Start()
+	void Awake()
 	{
 		animation ["Jump"].speed = 0.5f;
 		PlayerInstance = this;

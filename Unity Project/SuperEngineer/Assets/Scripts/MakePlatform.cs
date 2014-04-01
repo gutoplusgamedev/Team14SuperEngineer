@@ -18,40 +18,28 @@ public class MakePlatform : MonoBehaviour
 	private int j;
 	private int k;
 
-	private string[] parsedSyntax;
+
 	private GameObject[] currentSyntax;
 	public GameObject floatingSyntax;
 
 	// Use this for initialization
 	void Start () 
 	{
-		ParseSyntaxInformation ();
+
 		InitializePlatforms (5);
 		StartCoroutine (CreationCoroutine ());
-	}
-
-	void ParseSyntaxInformation ()
-	{
-		XmlDocument doc = new XmlDocument();
-		doc.Load("Assets/ValidSyntax.xml");
-		XmlNodeList nodes = doc.DocumentElement.SelectNodes("/validSyntax/symbol");
-		
-		parsedSyntax = new string[nodes.Count];
-		
-		int z = 0;
-		foreach (XmlNode node in nodes)
-		{
-			//Debug.Log(string.Format("{0}", node.InnerText));
-			parsedSyntax[z] = node.InnerText;
-			z++;
-		}
 	}
 
 	void InstantiatePlatform ()
 	{
 		GameObject platform = platforms [Random.Range (0, platforms.Length)];
-		Instantiate (platform, new Vector3(currentDisplacement, 0, 0), Quaternion.Euler (270, 0, 270));
+		Vector3 position = new Vector3 (currentDisplacement, 0, 0);
+		Instantiate (platform, position, Quaternion.Euler (270, 0, 270));
 		currentDisplacement += 4.345427f;
+		if (OnPlatformInstantiated != null) 
+		{
+			OnPlatformInstantiated (position, new Vector3 (currentDisplacement, 0, 0));
+		}
 	}
 
 	void InitializePlatforms (int howMany)
@@ -70,5 +58,9 @@ public class MakePlatform : MonoBehaviour
 			yield return new WaitForSeconds (PlayerControl.PlayerInstance.velocity * 0.5f);
 		}
 	}
+
+	public delegate void OnPlatformInstantiatedEventHandler (Vector3 position, Vector3 finalPosition);
+	public static event OnPlatformInstantiatedEventHandler OnPlatformInstantiated;
+
 }
 

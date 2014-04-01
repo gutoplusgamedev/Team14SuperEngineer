@@ -11,6 +11,7 @@ public class GapDetector : MonoBehaviour
 		{
 			if (OnPlayerCollision != null)
 			{
+				Destroy (GetComponent <BoxCollider>());
 				OnPlayerCollision ();
 			}
 		}
