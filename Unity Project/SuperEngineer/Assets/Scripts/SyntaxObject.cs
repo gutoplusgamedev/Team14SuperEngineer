@@ -7,7 +7,6 @@ public class SyntaxObject : MonoBehaviour
 	{
 		if (c.GetComponent<PlayerControl> () != null) 
 		{
-			GameMaster.points += 10;
 			StartCoroutine (OnPickUpCoroutine ());
 		}
 	}
@@ -17,7 +16,7 @@ public class SyntaxObject : MonoBehaviour
 		Destroy (GetComponent<BoxCollider> ());
 		TextMesh[] texts = GetComponentsInChildren<TextMesh> ();
 		Camera c = Camera.mainCamera;
-		float movVelocity = 2;
+		float movVelocity = 5;
 
 		while (true) 
 		{

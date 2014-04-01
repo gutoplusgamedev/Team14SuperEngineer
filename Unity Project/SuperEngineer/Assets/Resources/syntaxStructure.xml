@@ -3,96 +3,137 @@
 	<code type = "If">
 		<structure>
 			<syntax>if</syntax>
-			<syntax>(</syntax>
-			<syntax>booleanExpression</syntax>				
-			<syntax>)</syntax>
+			<syntax>(booleanExpression)</syntax>
 			<syntax>{</syntax>
-			<syntax>@Statement</syntax>
 			<syntax>}</syntax>
 		</structure>
-	</code>
-
-	<code type = "ElseIf">
 		<structure>
+			<syntax>if</syntax>
+			<syntax>(booleanExpression)</syntax>
+			<syntax>{</syntax>
+			<syntax>}</syntax>
 			<syntax>else if</syntax>
-			<syntax>(</syntax>
-			<syntax>booleanExpression</syntax>
-			<syntax>)</syntax>
+			<syntax>(booleanExpression)</syntax>
 			<syntax>{</syntax>
-			<syntax>@Statement</syntax>
 			<syntax>}</syntax>
 		</structure>
-	</code>
-
-	<code type = "Else">
 		<structure>
+			<syntax>if</syntax>
+			<syntax>(booleanExpression)</syntax>
+			<syntax>{</syntax>
+			<syntax>}</syntax>
+			<syntax>else if</syntax>
+			<syntax>(booleanExpression)</syntax>
+			<syntax>{</syntax>
+			<syntax>}</syntax>
 			<syntax>else</syntax>
 			<syntax>{</syntax>
-			<syntax>@Statement</syntax>
 			<syntax>}</syntax>
 		</structure>
 	</code>
 
 	<code type = "Method">
 		<structure>
-			<syntax>returnType</syntax>
+			<syntax>void</syntax>
 			<syntax>functionName</syntax>
-			<syntax>(</syntax>
-			<syntax>arguments</syntax>
-			<syntax>)</syntax>
+			<syntax>(arguments)</syntax>
 			<syntax>{</syntax>
-			<syntax>@If</syntax>
-			<syntax>@Statement</syntax>
-			<syntax>}</syntax>
-		</structure>
-	</code>
-
-	<code type = "Class">
-		<structure>
-			<syntax>class</syntax>
-			<syntax>className</syntax>
-			<syntax>{</syntax>
-			<syntax>@VariableDefinition</syntax>
-			<syntax>@Method</syntax>
+			<syntax>return</syntax>
+			<syntax>;</syntax>
 			<syntax>}</syntax>
 		</structure>
 		<structure>
-			<syntax>class</syntax>
-			<syntax>className</syntax>
-			<syntax>extends</syntax>
-			<syntax>subClass</syntax>
+			<syntax>void</syntax>
+			<syntax>functionName</syntax>
+			<syntax>()</syntax>
 			<syntax>{</syntax>
-			<syntax>@VariableDefinition</syntax>
-			<syntax>@Method</syntax>
+			<syntax>return</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>int</syntax>
+			<syntax>functionName</syntax>
+			<syntax>(arguments)</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>10</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>int</syntax>
+			<syntax>functionName</syntax>
+			<syntax>()</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>10</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>float</syntax>
+			<syntax>functionName</syntax>
+			<syntax>(arguments)</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>3.1</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>float</syntax>
+			<syntax>functionName</syntax>
+			<syntax>()</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>3.1</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>boolean</syntax>
+			<syntax>functionName</syntax>
+			<syntax>(arguments)</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>false</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>boolean</syntax>
+			<syntax>functionName</syntax>
+			<syntax>()</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>false</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>string</syntax>
+			<syntax>functionName</syntax>
+			<syntax>(arguments)</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>"string value"</syntax>
+			<syntax>;</syntax>
+			<syntax>}</syntax>
+		</structure>
+		<structure>
+			<syntax>string</syntax>
+			<syntax>functionName</syntax>
+			<syntax>()</syntax>
+			<syntax>{</syntax>
+			<syntax>return</syntax>
+			<syntax>"string value"</syntax>
+			<syntax>;</syntax>
 			<syntax>}</syntax>
 		</structure>
 	</code>
 
 	<code type = "VariableDefinition">
-		<structure>
-			<syntax>public</syntax>
-			<syntax>variableName</syntax>
-			<syntax>=</syntax>
-			<syntax>variableValue</syntax>
-			<syntax>;</syntax>
-		</structure>
-		<structure>
-			<syntax>private</syntax>
-			<syntax>variableName</syntax>
-			<syntax>=</syntax>
-			<syntax>variableValue</syntax>
-			<syntax>;</syntax>
-		</structure>
-		<structure>
-			<syntax>static</syntax>
-			<syntax>variableName</syntax>
-			<syntax>=</syntax>
-			<syntax>variableValue</syntax>
-			<syntax>;</syntax>
-		</structure>
-	</code>
-
-	<code type = "Statement">
 		<structure>
 			<syntax>int</syntax>
 			<syntax>var_name</syntax>
@@ -115,18 +156,23 @@
 			<syntax>;</syntax>
 		</structure>
 		<structure>
-			<syntax>Method</syntax>
-			<syntax>(</syntax>
-			<syntax>)</syntax>
+			<syntax>boolean</syntax>
+			<syntax>var_name</syntax>
+			<syntax>=</syntax>
+			<syntax>true</syntax>
+			<syntax>;</syntax>
+		</structure>
+	</code>
+
+	<code type = "Statement">
+		<structure>
+			<syntax>MethodCallback</syntax>
+			<syntax>()</syntax>
 			<syntax>;</syntax>
 		</structure>
 		<structure>
-			<syntax>return</syntax>
-			<syntax>SomeValidType</syntax>
-			<syntax>;</syntax>
-		</structure>
-		<structure>
-			<syntax>continue</syntax>
+			<syntax>MethodCallback</syntax>
+			<syntax>(arguments)</syntax>
 			<syntax>;</syntax>
 		</structure>
 	</code>

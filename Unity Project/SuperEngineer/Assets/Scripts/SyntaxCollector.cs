@@ -24,14 +24,33 @@ public class SyntaxCollector : MonoBehaviour {
 		counter = 0;
 		syntaxCollection = new List<string>();
 	}
-	
+
+	public static string GetSyntaxString ()
+	{
+		string returnStr = string.Empty;
+		foreach (string s in syntaxCollection) 
+		{
+			returnStr += s;
+			if (s == "{" || s == ";" || s == "}")
+			{
+				returnStr += "\n";
+			}
+			else
+			{
+				returnStr += " ";
+			}
+		}
+
+		return returnStr;
+	}
+
 	void Update() 
 	{
 		counter += Time.deltaTime;
 		if (counter > 1) 
 		{
 			counter--;
-			points += pointsPerSecond;
+			GameMaster.points += pointsPerSecond;
 		}
 	}
 	
@@ -40,28 +59,29 @@ public class SyntaxCollector : MonoBehaviour {
 		if (info.CompareTag("syntax"))
 		{
 			syntaxCollection.Add (info.gameObject.GetComponent<TextMesh> ().text);
-			Destroy (info.gameObject);
 			
-			//bool done;
-			//if (!isCorrect (syntaxCollection, out done)) 
-			//{
-			//	points += pointsPerIncorrect;
-			//	syntaxCollection = new List<string> ();
-			//	deathCounter--;
-			//	if (DeathCounter == 0)
-			//	{
-			//		//die!
-			//	}
-			//}
-			//else
-			//
-				points += pointsPerSyntax;
+			bool done;
+			if (!StructureHolder.IsCorrect (syntaxCollection, out done)) 
+			{
+				GameMaster.points += pointsPerIncorrect;
+				DialogueController.ShowDialogueBox = true;
+				syntaxCollection = new List<string> ();
+				deathCounter--;
+				if (deathCounter == 0)
+				{
+					GameOver.OnGameOver ();
+				}
+			}
+			else
+			{
+				GameMaster.points += pointsPerSyntax;
 			
-			//if (done)
-			//{
-			//	points += syntaxCollection.Count * pointsPerSyntaxCompletion;
-			//	syntaxCollection = new List<string> ();
-			//}
+				if (done)
+				{
+					GameMaster.points += syntaxCollection.Count * pointsPerSyntaxCompletion;
+					syntaxCollection = new List<string> ();
+				}
+			}
 		}
 	}
 }

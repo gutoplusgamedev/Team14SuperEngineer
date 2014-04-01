@@ -36,7 +36,7 @@ public class SyntaxInstantiator : MonoBehaviour
 	{
 		if (Random.Range (0f, 1f) <= 0.5f) 
 		{
-			InstantiateSyntax (position + Vector3.up);
+			InstantiateSyntax (finalPosition + (Vector3.up * 3));
 		}
 	}
 

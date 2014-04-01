@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <validSyntax>
 	<symbol>if</symbol>
-	<symbol>(</symbol>
-	<symbol>booleanExpression</symbol>
-	<symbol>)</symbol>
+	<symbol>(booleanExpression)</symbol>
 	<symbol>{</symbol>
 	<symbol>}</symbol>
 	<symbol>;</symbol>
 	<symbol>else if</symbol>
 	<symbol>else</symbol>
-	<symbol>returnType</symbol>
+	<symbol>void</symbol>
+	<symbol>int</symbol>
+	<symbol>float</symbol>
+	<symbol>boolean</symbol>
+	<symbol>string</symbol>
 	<symbol>functionName</symbol>
-	<symbol>arguments</symbol>
-	<symbol>class</symbol>
-	<symbol>className</symbol>
-	<symbol>extends</symbol>
-	<symbol>subClass</symbol>
-	<symbol>public</symbol>
-	<symbol>variableName</symbol>
+	<symbol>(arguments)</symbol>
+	<symbol>()</symbol>
+	<symbol>var_name</symbol>
 	<symbol>=</symbol>
-	<symbol>variableValue</symbol>
-	<symbol>private</symbol>
-	<symbol>static</symbol>
-	<symbol>MethodCallback</symbol>
 	<symbol>return</symbol>
-	<symbol>SomeValidType</symbol>
-	<symbol>continue</symbol>
+	<symbol>true</symbol>
+	<symbol>false</symbol>
+	<symbol>10</symbol>
+	<symbol>3.1</symbol>
+	<symbol>"string value"</symbol>
+	<symbol>MethodCallback</symbol>
 </validSyntax>

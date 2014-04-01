@@ -1,22 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SyntaxDecoder/DataParser.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SyntaxCollector.cs">
     <Files>
-      <File FileName="Assets/Scripts/SyntaxObject.cs" Line="22" Column="14" />
+      <File FileName="Assets/Scripts/SyntaxObject.cs" Line="9" Column="4" />
       <File FileName="Assets/Scripts/GameMaster.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GameOver.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GapDetector.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerControl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PropController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MainMenu1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BeetleController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PropCreator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MakePlatform.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/syntaxStructure.xml" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SyntaxDecoder/CodeStructures.cs" Line="70" Column="14" />
+      <File FileName="Assets/Resources/ValidSyntax.xml" Line="11" Column="22" />
+      <File FileName="Assets/Resources/syntaxStructure.xml" Line="143" Column="15" />
+      <File FileName="Assets/Scripts/pointGui.cs" Line="12" Column="32" />
+      <File FileName="Assets/Scripts/CamControl.cs" Line="14" Column="130" />
+      <File FileName="Assets/Scripts/SyntaxInstantiator.cs" Line="39" Column="36" />
       <File FileName="Assets/Scripts/SyntaxDecoder/Code.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SyntaxDecoder/CodePiece.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SyntaxDecoder/CodeStructures.cs" Line="28" Column="4" />
       <File FileName="Assets/Scripts/SyntaxDecoder/DataParser.cs" Line="56" Column="2" />
+      <File FileName="Assets/Scripts/SyntaxDecoder/StructureHolder.cs" Line="16" Column="20" />
+      <File FileName="Assets/Scripts/SyntaxCollector.cs" Line="71" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

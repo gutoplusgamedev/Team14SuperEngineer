@@ -50,11 +50,11 @@
      <Compile Include="Assets\Scripts\Back.cs" />
      <Compile Include="Assets\Scripts\BeetleController.cs" />
      <Compile Include="Assets\Scripts\CamControl.cs" />
+     <Compile Include="Assets\Scripts\DialogueController.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\GapDetector.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\MainMenu1.cs" />
      <Compile Include="Assets\Scripts\MakePlatform.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PropController.cs" />
