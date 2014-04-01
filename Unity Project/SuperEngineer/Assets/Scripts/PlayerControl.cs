@@ -21,7 +21,18 @@ public class PlayerControl : MonoBehaviour
 		foreach (Rigidbody r in rbs) 
 		{
 			if (r.gameObject.tag != "CharRoot")
+			{
 				r.useGravity = state;
+
+				if (state)
+				{
+					r.constraints = RigidbodyConstraints.None;
+				}
+				else
+				{
+					r.constraints = RigidbodyConstraints.FreezeAll;
+				}
+			}	
 		}
 
 		foreach (Collider c in cs) 
