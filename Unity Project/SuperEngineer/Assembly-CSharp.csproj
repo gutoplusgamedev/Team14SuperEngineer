@@ -46,9 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AboutUs.cs" />
-     <Compile Include="Assets\Back.cs" />
-     <Compile Include="Assets\Resources\CharController.cs" />
+     <Compile Include="Assets\Scripts\AboutUs.cs" />
+     <Compile Include="Assets\Scripts\Back.cs" />
      <Compile Include="Assets\Scripts\CamControl.cs" />
      <Compile Include="Assets\Scripts\GapDetector.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -59,8 +58,7 @@
      <Compile Include="Assets\Scripts\SyntaxCollector.cs" />
      <Compile Include="Assets\Scripts\SyntaxInstantiator.cs" />
      <Compile Include="Assets\Scripts\pointGui.cs" />
-     <None Include="Assets\ValidSyntax.xml" />
-     <None Include="Assets\syntaxStructure.xml" />
+     <None Include="Assets\Resources\ValidSyntax.xml" />
      <None Include="Assets\Resources\syntaxStructure.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

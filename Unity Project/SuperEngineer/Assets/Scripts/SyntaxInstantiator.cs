@@ -16,7 +16,7 @@ public class SyntaxInstantiator : MonoBehaviour
 	void ParseSyntaxInformation ()
 	{
 		XmlDocument doc = new XmlDocument();
-		doc.Load("Assets/ValidSyntax.xml");
+		doc.Load("Assets/Resources/ValidSyntax.xml");
 		XmlNodeList nodes = doc.DocumentElement.SelectNodes("/validSyntax/symbol");
 		
 		parsedSyntax = new string[nodes.Count];
