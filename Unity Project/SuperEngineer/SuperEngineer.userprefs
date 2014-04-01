@@ -1,14 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMaster.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SyntaxDecoder/DataParser.cs">
     <Files>
       <File FileName="Assets/Scripts/SyntaxObject.cs" Line="22" Column="14" />
-      <File FileName="Assets/Scripts/GameMaster.cs" Line="10" Column="14" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GameOver.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GapDetector.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PropController.cs" Line="12" Column="4" />
-      <File FileName="Assets/Scripts/MainMenu1.cs" Line="18" Column="60" />
+      <File FileName="Assets/Scripts/PropController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MainMenu1.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BeetleController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PropCreator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MakePlatform.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/syntaxStructure.xml" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SyntaxDecoder/Code.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SyntaxDecoder/CodePiece.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SyntaxDecoder/CodeStructures.cs" Line="28" Column="4" />
+      <File FileName="Assets/Scripts/SyntaxDecoder/DataParser.cs" Line="56" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

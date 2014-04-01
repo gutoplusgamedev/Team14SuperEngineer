@@ -60,6 +60,11 @@
      <Compile Include="Assets\Scripts\PropController.cs" />
      <Compile Include="Assets\Scripts\PropCreator.cs" />
      <Compile Include="Assets\Scripts\SyntaxCollector.cs" />
+     <Compile Include="Assets\Scripts\SyntaxDecoder\Code.cs" />
+     <Compile Include="Assets\Scripts\SyntaxDecoder\CodePiece.cs" />
+     <Compile Include="Assets\Scripts\SyntaxDecoder\CodeStructures.cs" />
+     <Compile Include="Assets\Scripts\SyntaxDecoder\DataParser.cs" />
+     <Compile Include="Assets\Scripts\SyntaxDecoder\StructureHolder.cs" />
      <Compile Include="Assets\Scripts\SyntaxInstantiator.cs" />
      <Compile Include="Assets\Scripts\SyntaxObject.cs" />
      <Compile Include="Assets\Scripts\pointGui.cs" />

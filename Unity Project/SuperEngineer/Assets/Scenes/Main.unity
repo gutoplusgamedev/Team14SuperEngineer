@@ -1858,7 +1858,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: d0310000abc874e76ba6eace6c420d76, type: 2}
   rock: {fileID: 100000, guid: 202db3355f4264e6f8e3008317659ed6, type: 2}
   distanceFromPlatforms: 1.5
-  rockHeight: .300000012
+  rockHeight: .100000001
 --- !u!4 &1209850500
 Transform:
   m_ObjectHideFlags: 0
