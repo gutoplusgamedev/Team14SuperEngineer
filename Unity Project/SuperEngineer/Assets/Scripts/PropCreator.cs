@@ -18,7 +18,7 @@ public class PropCreator: MonoBehaviour
 		MakePlatform.OnPlatformInstantiated -= OnPlatformInstantiated;
 	}
 
-	void OnPlatformInstantiated (Vector3 position, Vector3 finalPosition)
+	void OnPlatformInstantiated (Vector3 position, Vector3 finalPosition, int index)
 	{
 		InstantiateTrees (Random.Range (1, 5), position, finalPosition);
 		InstantiateRocks (Random.Range (1, 6), position, finalPosition);

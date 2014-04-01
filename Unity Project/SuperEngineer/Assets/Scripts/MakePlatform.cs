@@ -21,14 +21,15 @@ public class MakePlatform : MonoBehaviour
 
 	void InstantiatePlatform ()
 	{
-		GameObject platform = platforms [Random.Range (0, platforms.Length)];
+		int index = Random.Range (0, platforms.Length);
+		GameObject platform = platforms [index];
 		Vector3 position = new Vector3 (currentDisplacement, 0, 0);
 		Instantiate (platform, position, Quaternion.Euler (270, 0, 270));
 		InstantiateBackground ();
 		currentDisplacement += 4.345427f;
 		if (OnPlatformInstantiated != null) 
 		{
-			OnPlatformInstantiated (position, new Vector3 (currentDisplacement, 0, 0));
+			OnPlatformInstantiated (position, new Vector3 (currentDisplacement, 0, 0), index);
 		}
 	}
 
@@ -41,7 +42,7 @@ public class MakePlatform : MonoBehaviour
 		currentDisplacement += 4.345427f;
 		if (OnPlatformInstantiated != null) 
 		{
-			OnPlatformInstantiated (position, new Vector3 (currentDisplacement, 0, 0));
+			OnPlatformInstantiated (position, new Vector3 (currentDisplacement, 0, 0), index);
 		}
 	}
 
@@ -68,7 +69,7 @@ public class MakePlatform : MonoBehaviour
 		}
 	}
 
-	public delegate void OnPlatformInstantiatedEventHandler (Vector3 position, Vector3 finalPosition);
+	public delegate void OnPlatformInstantiatedEventHandler (Vector3 position, Vector3 finalPosition, int platformIndex);
 	public static event OnPlatformInstantiatedEventHandler OnPlatformInstantiated;
 
 }

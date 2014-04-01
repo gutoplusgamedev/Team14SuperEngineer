@@ -32,11 +32,11 @@ public class SyntaxInstantiator : MonoBehaviour
 		MakePlatform.OnPlatformInstantiated -= OnPlatformInstantiated;
 	}
 
-	void OnPlatformInstantiated (Vector3 position, Vector3 finalPosition)
+	void OnPlatformInstantiated (Vector3 position, Vector3 finalPosition, int index)
 	{
-		if (Random.Range (0f, 1f) <= 0.5f) 
+		if (index == 1 || index == 2)
 		{
-			InstantiateSyntax (finalPosition + (Vector3.up * 3));
+			InstantiateSyntax (position + (Vector3.up * 3));
 		}
 	}
 

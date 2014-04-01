@@ -162,6 +162,13 @@
 			<syntax>true</syntax>
 			<syntax>;</syntax>
 		</structure>
+		<structure>
+			<syntax>boolean</syntax>
+			<syntax>var_name</syntax>
+			<syntax>=</syntax>
+			<syntax>false</syntax>
+			<syntax>;</syntax>
+		</structure>
 	</code>
 
 	<code type = "Statement">
