@@ -8,24 +8,12 @@ using System.Text;
 public class MakePlatform : MonoBehaviour 
 {
 	public GameObject[] platforms; //create platform of this type
-	public GameObject[] trees;
-	public GameObject[] trees1;
-	private float counter;	//keeps track of the time so we create a new object every 1 second
-	private float treecounter;
+	public GameObject background;
 	public static float currentDisplacement = -10; //keeps track of where we are in x
-	private float xPostree;
-	private int i; //so we can destroy objects
-	private int j;
-	private int k;
-
-
-	private GameObject[] currentSyntax;
-	public GameObject floatingSyntax;
 
 	// Use this for initialization
 	void Start () 
 	{
-
 		InitializePlatforms (5);
 		StartCoroutine (CreationCoroutine ());
 	}
@@ -35,6 +23,7 @@ public class MakePlatform : MonoBehaviour
 		GameObject platform = platforms [Random.Range (0, platforms.Length)];
 		Vector3 position = new Vector3 (currentDisplacement, 0, 0);
 		Instantiate (platform, position, Quaternion.Euler (270, 0, 270));
+		InstantiateBackground ();
 		currentDisplacement += 4.345427f;
 		if (OnPlatformInstantiated != null) 
 		{
@@ -48,6 +37,12 @@ public class MakePlatform : MonoBehaviour
 		{
 			InstantiatePlatform ();
 		}
+	}
+
+	void InstantiateBackground ()
+	{
+		Quaternion rot = Quaternion.Euler (270, 270, 0);
+		Instantiate (background, new Vector3 (currentDisplacement, 0, 0), rot);
 	}
 
 	IEnumerator CreationCoroutine ()

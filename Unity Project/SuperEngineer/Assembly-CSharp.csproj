@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\AboutUs.cs" />
      <Compile Include="Assets\Scripts\Back.cs" />
      <Compile Include="Assets\Scripts\CamControl.cs" />
+     <Compile Include="Assets\Scripts\GameMaster.cs" />
+     <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\GapDetector.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MakePlatform.cs" />
@@ -57,6 +59,7 @@
      <Compile Include="Assets\Scripts\PropCreator.cs" />
      <Compile Include="Assets\Scripts\SyntaxCollector.cs" />
      <Compile Include="Assets\Scripts\SyntaxInstantiator.cs" />
+     <Compile Include="Assets\Scripts\SyntaxObject.cs" />
      <Compile Include="Assets\Scripts\pointGui.cs" />
      <None Include="Assets\Resources\ValidSyntax.xml" />
      <None Include="Assets\Resources\syntaxStructure.xml" />

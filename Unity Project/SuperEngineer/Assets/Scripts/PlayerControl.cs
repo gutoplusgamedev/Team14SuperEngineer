@@ -63,11 +63,13 @@ public class PlayerControl : MonoBehaviour
 
 	void OnPlayerCollidedWithGap ()
 	{
-		OnDie ();
+		StartCoroutine (OnDie ());
 	}
 
-	void OnDie ()
+	IEnumerator OnDie ()
 	{
 		this.enabled = false;
+		yield return new WaitForSeconds (1);
+		GameOver.OnGameOver ();
 	}
 }

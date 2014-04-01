@@ -43,6 +43,10 @@ public class SyntaxInstantiator : MonoBehaviour
 	void InstantiateSyntax (Vector3 position)
 	{
 		GameObject go = (GameObject)Instantiate (textPrefab, position, Quaternion.identity);
-		go.GetComponent<TextMesh> ().text = parsedSyntax [Random.Range (0, parsedSyntax.Length)];
+		string syntax = parsedSyntax [Random.Range (0, parsedSyntax.Length)];
+		foreach (TextMesh m in go.GetComponentsInChildren<TextMesh>()) 
+		{
+			m.text = syntax;
+		}
 	}
 }

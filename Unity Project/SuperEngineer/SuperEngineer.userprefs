@@ -1,18 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SyntaxInstantiator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOver.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlatformController.cs" Line="1" Column="1" />
-      <File FileName="Assets/ValidSyntax.xml" Line="1" Column="1" />
-      <File FileName="Assets/Resources/syntaxStructure.xml" Line="1" Column="1" />
-      <File FileName="../../../../../../../../../EECE78/Assets/Character.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/pointGui.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MakePlatform.cs" Line="31" Column="3" />
-      <File FileName="Assets/Scripts/PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GapDetector.cs" Line="14" Column="44" />
-      <File FileName="Assets/Scripts/CamControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PropCreator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SyntaxInstantiator.cs" Line="39" Column="44" />
+      <File FileName="Assets/Scripts/SyntaxObject.cs" Line="10" Column="28" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameOver.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameOver.cs" Line="16" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
